@@ -1,6 +1,7 @@
 package com.example.kclasses;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
@@ -18,6 +19,8 @@ public class MainPlugin extends JavaPlugin {
     protected void setup() {
         this.getCommandRegistry()
                 .registerCommand(new MainCommand(this.getName(), this.getManifest().getVersion().toString()));
+
+        this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, PlayerJoinedEvent::onPlayerReady);
     }
 
     // @Override
