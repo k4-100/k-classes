@@ -60,6 +60,8 @@ tasks.named<ProcessResources>("processResources") {
     inputs.properties(replaceProperties)
 }
 
+
+
 tasks.withType<Jar> {
     manifest {
         attributes["Specification-Title"] = rootProject.name
@@ -71,6 +73,18 @@ tasks.withType<Jar> {
                 .getOrElse(version.toString())
     }
 }
+
+
+// MINE
+
+
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from("src/main/resources")
+}
+
+
 
 publishing {
     repositories {
@@ -125,3 +139,4 @@ afterEvaluate {
         logger.warn("⚠️ Could not find 'runServer' or 'server' task to hook auto-sync into.")
     }
 }
+
