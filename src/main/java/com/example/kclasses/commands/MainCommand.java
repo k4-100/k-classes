@@ -1,4 +1,4 @@
-package com.example.kclasses;
+package com.example.kclasses.commands;
 
 import com.hypixel.hytale.protocol.GameMode;
 import com.hypixel.hytale.server.core.Message;

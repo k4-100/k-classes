@@ -1,5 +1,5 @@
 
-package com.example.kclasses;
+package com.example.kclasses.events;
 
 import java.util.function.Consumer;
 

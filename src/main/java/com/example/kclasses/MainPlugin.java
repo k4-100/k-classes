@@ -1,5 +1,7 @@
 package com.example.kclasses;
 
+import com.example.kclasses.commands.MainCommand;
+import com.example.kclasses.events.PlayerJoinedEvent;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
