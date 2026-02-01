@@ -1,1 +1,1 @@
-gradle build && gradle runServer
+gradle syncAssets && gradle build && gradle runServer

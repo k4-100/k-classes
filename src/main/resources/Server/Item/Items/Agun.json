@@ -1,0 +1,5 @@
+{
+  "Model": "Items/Agun.blockymodel",
+  "Texture": "Items/Textures/Agun.png",
+  "UsePlayerAnimations": false
+}
