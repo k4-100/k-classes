@@ -1,5 +1,24 @@
 {
-  "Model": "Items/Agun.blockymodel",
   "Texture": "Items/Textures/Agun.png",
-  "UsePlayerAnimations": false
+  "Model": "Items/Agun.blockymodel",
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      14,
+      -29
+    ]
+  },
+  "TranslationProperties": {
+    "Name": "Agun",
+    "Description": "It guns mobs down"
+  },
+  "MaxStack": 1,
+  "Icon": "Icons/ItemsGenerated/Agun.png",
+  "UsePlayerAnimations": false,
+  "PlayerAnimationsId": "Handgun"
 }
