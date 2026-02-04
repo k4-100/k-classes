@@ -3,8 +3,10 @@ package com.example.kclasses;
 import com.example.kclasses.commands.MainCommand;
 import com.example.kclasses.commands.SkillsCommand;
 import com.example.kclasses.events.PlayerJoinedEvent;
+import com.example.kclasses.interactions.*;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
@@ -27,6 +29,10 @@ public class MainPlugin extends JavaPlugin {
                 .registerCommand(new SkillsCommand());
 
         this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, PlayerJoinedEvent::onPlayerReady);
+
+        this.getCodecRegistry(Interaction.CODEC).register("Reload_Agun_Interaction",
+                ReloadAgunInteraction.class,
+                ReloadAgunInteraction.CODEC);
     }
 
     // @Override
